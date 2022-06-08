@@ -22,6 +22,7 @@ Modules:
         StoreID <- Rec:Store  {Page:[Order]}
         UserID  <- Rec:User   {Page:[Order:SelectUser]}
         RecordID <- [NOW]:generatedID [TODO]:a page {Page:[Order]}
+          /*If the ProductType is TreatMent*/
       *Info
         OrderTime <- Generated {Page:[OrderList]}
         *Person
@@ -71,10 +72,10 @@ Modules:
           BalaceValue 
           Money {Page:[Order:Product]}
      }
-  An Staff
+  An Staff {Page:[]}
     {
       *ID
-        StaffID
+        StaffID 
       *Info
         Name
       *Skill[TODO]
@@ -89,20 +90,21 @@ Modules:
         Name
         Location
     }
-  An Wage
+  An Wage {Page:[Wage]}
     {
       *ID
-        WageID
-        StaffID
+        WageID {Page:[]}
+        StaffID {Page:[]}
       *Info
-        Time
-        TimeRange
-        Value
-        [TODO]:DetailList
+        Time {Page:[Wage]}
+        TimeRange {Page:[Wage]}
+        Value {Page:[Wage]}
+        [TODO]:DetailList {Page:[Wage]}
           /*Form: [[OrderId,UserId,Time,Price,PayWay,Wage]]*/   
     }
   
 **Pages**::
+
   [Page]OrderList
   [Page]Order
     [Module]SelectUser
@@ -112,7 +114,7 @@ Modules:
   [Page]AddUser
   [Page]User
   [Page]Wage
-
+  
         
           
       
