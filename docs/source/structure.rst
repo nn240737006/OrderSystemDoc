@@ -115,6 +115,17 @@ Modules:
   [Page]User
   [Page]Wage
   
+**PageLogic**::
+[Page]Root
+  [Module]Button:OrderList
+  [Module]Button:"add order"
+    ->[Page]Order
+      ->[Page]AddUser
+      ->[Page]User
+  [Module]Button:"user"
+    ->[Page]User
+  [Module]Button:Wage
+      
         
           
       
