@@ -116,17 +116,29 @@ Modules:
   [Page]Wage
   
 **PageLogic**::
-[Page]Root
-  [Module]Button:OrderList
-  [Module]Button:"add order"
-    ->[Page]Order
-      ->[Page]AddUser
+
+  [Page]Root
+    [Module]Button:OrderList
+    [Module]Button:"add order"
+      ->[Page]Order
+        ->[Page]AddUser
+        ->[Page]User
+    [Module]Button:"user"
       ->[Page]User
-  [Module]Button:"user"
-    ->[Page]User
-  [Module]Button:Wage
-      
+    [Module]Button:Wage
+      ->[Page]Wage
         
-          
+        
+**PageLogicGen**::
+
+  Desc:[A]"B"{C:D}
+    =>Data:Module:A,InstanceName:B,InstanceProperty:{C:D}
+  Code:
+    1.<A name="B" C=D/>
+    2.<A C=D>B</A>
+
+the real part:
+  
+  
       
     
